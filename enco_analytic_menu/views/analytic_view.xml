@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <!-- Top menu item -->
+        <menuitem name="Analytic"
+            id="analytic_menu"
+            groups="group_account_analytic"
+            sequence="10"/>
+        
+        <menuitem name="Analytic account" id="analytic_account_menu"
+            parent="analytic_menu" sequence="50" />
+        
+        <record id="action_analytic_account" model="ir.actions.act_window">
+            <field name="name">Analytic Account</field>
+            <field name="res_model">account.analytic.account</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="account.view_account_analytic_account_tree"/>
+            <field name="search_view_id" ref="account.view_account_analytic_account_search"/>
+        </record>
+        <menuitem id="menu_module_analytic" parent="analytic_account_menu" name="Analytic account" sequence="5" action="action_analytic_account" />
+    </data>
+</openerp>

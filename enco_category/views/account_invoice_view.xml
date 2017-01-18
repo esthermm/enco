@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="account_invoice_tree">
+            <field name="name">account.invoice.tree</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree"/>
+            <field name="arch" type="xml">
+                <field name="origin" position="after">
+                    <field name="categ_ids"><tree><field name="name"/></tree></field>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="account_invoice_search">
+            <field name="name">account.invoice.search</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="categ_ids" />
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="account_invoice_supplier_form">
+            <field name="name">account.invoice.supplier.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <field name="check_total" position="after">
+                    <field name="categ_ids" required="1" widget="many2many_tags"
+                                context="{'object_name': 'crm.lead'}"/>
+                </field>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="account_invoice_form">
+            <field name="name">account.invoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@groups='base.group_multi_currency']" position="after">
+                    <field name="categ_ids" required="1" widget="many2many_tags" context="{'object_name': 'crm.lead'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

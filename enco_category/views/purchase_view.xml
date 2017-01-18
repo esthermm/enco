@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="purchase_order_form">
+            <field name="name">purchase.order.inherit</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_ref" position="after">
+                    <field name="categ_ids" widget="many2many_tags"
+                                context="{'object_name': 'crm.lead'}" required="1"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="purchase_order_tree">
+            <field name="name">purchase.order.tree.inherit</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="before">
+                    <field name="categ_ids"><tree><field name="name"/></tree></field>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_purchase_order_filter" model="ir.ui.view">
+            <field name="name">purchase.order.list.select</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="enco_purcharce_order_ext.view_purchase_order_filter_inh"/>
+            <field name="arch" type="xml">
+                <field name="origin" position="after">
+                    <field name="categ_ids" string="Purchase Category" />
+                </field>
+                <xpath expr="//filter[@string='Ack Period']" position="after">
+                    <filter string="Category" domain="[]" context="{'group_by':'categ_ids'}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_request_for_quotation_filter" model="ir.ui.view">
+            <field name="name">purchase.order.list.select</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.view_request_for_quotation_filter"/>
+            <field name="arch" type="xml">
+                <field name="create_uid" position="after">
+                    <field name="categ_ids" string="Purchase Category" />
+                </field>
+                <xpath expr="//filter[@string='Expected Date']" position="after">
+                    <filter string="Category" domain="[]" context="{'group_by':'categ_ids'}"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

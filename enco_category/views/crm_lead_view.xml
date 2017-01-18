@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        
+        <record id="crm_case_categ_view_form" model="ir.ui.view">
+            <field name="name">crm.case.categ.form</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+            <field name="arch" type="xml">
+                <field name="categ_ids" position="attributes">
+                    <attribute name="required">1</attribute>
+                </field>
+            </field>
+        </record>
+        
+        <record id="crm_case_categ_view_tree" model="ir.ui.view">
+            <field name="name">crm.case.categ.tree</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
+            <field name="arch" type="xml">
+                <field name="message_unread" position="after">
+                    <field name="categ_ids"><tree><field name="name"/></tree></field>
+                </field>
+            </field>
+        </record>
+        
+        <record id="crm_case_categ_view_tree" model="ir.ui.view">
+            <field name="name">crm.case.categ.tree</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
+            <field name="arch" type="xml">
+                <field name="message_unread" position="after">
+                    <field name="categ_ids"><tree><field name="name"/></tree></field>
+                </field>
+            </field>
+        </record>
+
+        <record id="crm_lead_oppor_categ_view_tree" model="ir.ui.view">
+            <field name="name">crm.lead.oppor.categ.tree</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="categ_ids"><tree><field name="name"/></tree></field>
+                </field>
+            </field>
+        </record>
+
+        <record id="crm_lead_categ_view_search" model="ir.ui.view">
+            <field name="name">crm.lead.oppor.categ.search</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_case_leads_filter"/>
+            <field name="arch" type="xml">
+                <field name="country_id" position="after">
+                    <field name="categ_ids"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="crm_lead_oppor_categ_view_search" model="ir.ui.view">
+            <field name="name">crm.lead.oppor.categ.search</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="categ_ids"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

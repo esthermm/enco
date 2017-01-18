@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* enco_category
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-16 12:07+0000\n"
+"PO-Revision-Date: 2017-01-16 13:09+0100\n"
+"Last-Translator: Esther Martín <esthermartin@avanzosc.es>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: enco_category
+#: view:purchase.order:enco_category.view_purchase_order_filter
+#: view:purchase.order:enco_category.view_request_for_quotation_filter
+#: view:sale.order:enco_category.view_sales_order_enco_filter
+msgid "Category"
+msgstr "Categoría"
+
+#. module: enco_category
+#: model:ir.model,name:enco_category.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: enco_category
+#: model:ir.model,name:enco_category.model_procurement_order
+msgid "Procurement"
+msgstr "Abastecimiento"
+
+#. module: enco_category
+#: view:purchase.order:enco_category.view_purchase_order_filter
+#: view:purchase.order:enco_category.view_request_for_quotation_filter
+msgid "Purchase Category"
+msgstr "Categoría de compras"
+
+#. module: enco_category
+#: model:ir.model,name:enco_category.model_purchase_order
+msgid "Purchase Order"
+msgstr "Pedido de compra"
+
+#. module: enco_category
+#: field:account.invoice,purchase_ids:0
+msgid "Purchases"
+msgstr "Compras"
+
+#. module: enco_category
+#: field:account.invoice,sale_ids:0
+msgid "Sales"
+msgstr "Ventas"
+
+#. module: enco_category
+#: view:sale.order:enco_category.view_sales_order_filter
+msgid "Sales Category"
+msgstr "Categoría de ventas"
+
+#. module: enco_category
+#: model:ir.model,name:enco_category.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: enco_category
+#: field:account.invoice,categ_ids:0 field:purchase.order,categ_ids:0
+msgid "Tags"
+msgstr "Categoría"

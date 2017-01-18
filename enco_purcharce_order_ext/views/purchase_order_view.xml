@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- Form  -->
+        <record model="ir.ui.view" id="purchase_order_form_inh">
+            <field name="name">purcharse.order.form.inh</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form" />
+            <field name="priority" eval="21"/>
+            <field name="arch" type="xml">
+                <field name="date_order" position="after">
+                    <field name="period_ack" />
+                </field>
+            </field>
+        </record>
+        
+        <!-- Tree  -->
+        <record id="purchase_order_tree_inh" model="ir.ui.view">
+            <field name="name">purchase.order.tree.inh</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_tree" />
+            <field name="arch" type="xml">
+                <field name="date_order" position="after">
+                    <field name="period_ack"/>
+                </field>
+            </field>
+        </record>
+        
+        <!-- Search  -->
+        <!-- en la 8 la vista es view_request_for_quotation_filter -->
+        <record id="view_purchase_order_filter_inh" model="ir.ui.view">
+            <field name="name">view.purchase.order.filter.inh</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.view_request_for_quotation_filter" />
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="origin" string="Origin"/>
+                </field>
+                <filter string="Expected Date" position="after">
+                    <filter string="Ack Period" icon="terp-go-month" domain="[]" context="{'group_by':'period_ack'}"/>
+                </filter>
+            </field>
+        </record>
+        
+    </data>
+</openerp>

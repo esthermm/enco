@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_order_form_inh">
+            <field name="name">sale.order.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="priority" eval="16"/>
+            <field name="inherit_id" ref="enco_sale_order_ext.view_order_form_inh"/>
+            <field name="arch" type="xml">
+                <field name="categ_ids" position="replace"/>
+                <field name="period_ack" position="after">
+                    <field name="categ_ids" widget="many2many_tags"
+                                context="{'object_name': 'crm.lead'}" required="1" />
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_order_tree">
+            <field name="name">sale.order.tree.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_tree"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="before">
+                    <field name="categ_ids"><tree><field name="name"/></tree></field>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_sales_order_enco_filter" model="ir.ui.view">
+            <field name="name">sale.order.list.enco.select</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="enco_sale_order_ext.view_sales_order_filter_inh"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@string='Ack Period']" position="after">
+                    <filter string="Category" context="{'group_by':'categ_ids'}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_sales_order_filter" model="ir.ui.view">
+            <field name="name">sale.order.list.select</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+            <field name="arch" type="xml">
+                <field name="product_id" position="after">
+                    <field name="categ_ids" widget="many2many_tags"
+                                context="{'object_name': 'crm.lead'}" string="Sales Category" />
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

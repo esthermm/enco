@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        
+        <record model="ir.ui.view" id="crm_case_phone_tree_view_inh_lead_ext">
+            <field name="name">crm.case.phone.tree.view.inh.lead.ext</field>
+            <field name="model">crm.phonecall</field>
+            <field name="inherit_id" ref="crm.crm_case_phone_tree_view" />
+            <field name="arch" type="xml">
+                <field name="partner_id" position="before">
+                    <field name="partner_name" />
+                    <field name="contact_name" />
+                    <field name="partner_mobile" />
+                </field>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="crm_case_inbound_phone_tree_view_inh_lead_ext">
+            <field name="name">crm.case.inbound.phone.tree.view.inh.lead.ext</field>
+            <field name="model">crm.phonecall</field>
+            <field name="inherit_id" ref="crm.crm_case_inbound_phone_tree_view" />
+            <field name="arch" type="xml">
+                <field name="partner_id" position="before">
+                    <field name="partner_name" />
+                </field>
+                <field name="partner_id" position="after">
+                    <field name="contact_name" />
+                </field>
+                <field name="partner_mobile" position="attributes">
+                    <attribute name="invisible"/>
+                </field>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_crm_case_phonecalls_filter_inh_lead_ext">
+            <field name="name">view.crm.case.phonecalls.filter.inh.lead_ext</field>
+            <field name="model">crm.phonecall</field>
+            <field name="inherit_id" ref="crm.view_crm_case_phonecalls_filter" />
+            <field name="arch" type="xml">
+                <field name="partner_id" position ="before">
+                    <field name="partner_name" />
+                </field>
+                <field name="partner_id" position ="after">
+                    <field name="contact_name" />
+                    <field name="partner_mobile" />
+                </field>
+                <xpath expr="//filter[@string='Partner']" position="before">
+                    <filter string="Partner Name" icon="terp-personal" domain="[]" context="{'group_by' : 'partner_name'}" />
+                </xpath>
+                <xpath expr="//filter[@string='Partner']" position="after">
+                    <filter string="Contact Name" icon="terp-personal" domain="[]" context="{'group_by' : 'contact_name'}" />
+                    <filter string="Mobile" icon="terp-personal" domain="[]" context="{'group_by' : 'partner_mobile'}" />
+                </xpath>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="crm_case_phone_form_view_inh_lead_ext">
+            <field name="name">crm.case.phone.form.view.inh.lead.ext</field>
+            <field name="model">crm.phonecall</field>
+            <field name="inherit_id" ref="crm.crm_case_phone_form_view" />
+            <field name="arch" type="xml">
+                <field name="partner_id" position="before">
+                    <field name="partner_name" colspan="2"/>
+                    <field name="contact_name" colspan="2"/>
+                </field>
+            </field>
+        </record>
+        
+    </data>
+</openerp>

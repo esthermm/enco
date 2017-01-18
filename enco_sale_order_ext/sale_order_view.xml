@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- Form  -->
+        <record model="ir.ui.view" id="view_order_form_inh">
+            <field name="name">view.order.form.inh</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="period_ack"/>
+                </field>
+            </field>
+        </record>
+        
+        <!-- Tree  -->
+        <record id="sale_view_order_tree_inh" model="ir.ui.view">
+            <field name="name">sale.view.order.tree.inh</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_tree" />
+            <field name="arch" type="xml">
+                <field name="date_order" position="after">
+                    <field name="period_ack"/>
+                </field>
+            </field>
+        </record>
+        
+        <!-- Search  -->
+        <record id="view_sales_order_filter_inh" model="ir.ui.view">
+            <field name="name">view.sales.order.filter.inh</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter" />
+            <field name="arch" type="xml">
+                <filter string="Order Month" position="after">
+                    <filter string="Ack Period" icon="terp-go-month" domain="[]" context="{'group_by':'period_ack'}"/>
+                </filter>
+            </field>
+        </record>
+        
+    </data>
+</openerp>
