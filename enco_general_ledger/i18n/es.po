@@ -1,0 +1,187 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* enco_general_ledger
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-25 12:23+0000\n"
+"PO-Revision-Date: 2017-01-25 13:25+0100\n"
+"Last-Translator: Ainara Galdona <ainaragaldona@avanzosc.es>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid ": General ledger"
+msgstr ": Libro mayor"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "All accounts'"
+msgstr "Todas la cuentas"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Balance"
+msgstr "Saldo"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Chart of Accounts:"
+msgstr "Árbol de cuentas"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Credit"
+msgstr "Haber"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Date"
+msgstr "Fecha"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Date from :"
+msgstr "Fecha desde:"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Date to :"
+msgstr "Fecha hasta:"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Debit"
+msgstr "Debe"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Display Account"
+msgstr "Mostrar cuenta"
+
+#. module: enco_general_ledger
+#: field:report.enco_general_ledger.report_enco_generalledger,display_name:0
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "End Period:"
+msgstr "Periodo fin:"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Entry Label"
+msgstr "Etiqueta asiento"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Filter By:"
+msgstr "Filtrado por:"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Filtered by date"
+msgstr "Filtrado por fecha:"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Filtered by period"
+msgstr "Filtrado por periodo"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Fiscal Year:"
+msgstr "Ejercicio fiscal"
+
+#. module: enco_general_ledger
+#: model:ir.actions.report.xml,name:enco_general_ledger.action_report_enco_general_ledger
+msgid "General Ledger Enco"
+msgstr "Libro Mayor Enco"
+
+#. module: enco_general_ledger
+#: model:ir.model,name:enco_general_ledger.model_account_report_general_ledger
+msgid "General Ledger Report"
+msgstr "Informe del libro mayor"
+
+#. module: enco_general_ledger
+#: field:report.enco_general_ledger.report_enco_generalledger,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "JRNL"
+msgstr "LIBRO"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Journals:"
+msgstr "Diarios:"
+
+#. module: enco_general_ledger
+#: field:report.enco_general_ledger.report_enco_generalledger,__last_update:0
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Move"
+msgstr "Asiento"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Not filtered"
+msgstr "No filtrado"
+
+#. module: enco_general_ledger
+#: field:account.report.general.ledger,not_show_counterpart:0
+msgid "Not show Counterpart"
+msgstr "No mostrar contrapartida"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Ref"
+msgstr "Ref."
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Sorted By:"
+msgstr "Ordenado por:"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Start Period:"
+msgstr "Periodo de inicio:"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "Target Moves:"
+msgstr "Movimientos destino"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "With balance not equal to zero"
+msgstr "Con saldo distinto a 0"
+
+#. module: enco_general_ledger
+#: view:website:enco_general_ledger.report_enco_generalledger
+msgid "With movements"
+msgstr "Con movimientos"

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report 
+            id="action_report_enco_general_ledger" 
+            model="account.report.general.ledger" 
+            string="General Ledger Enco"
+            report_type="qweb-pdf"
+            name="enco_general_ledger.report_enco_generalledger" 
+            file="enco_general_ledger.report_enco_generalledger"
+            menu="False"
+            auto="False"
+        />
+    </data>
+</openerp>
