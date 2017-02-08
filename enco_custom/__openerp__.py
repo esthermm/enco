@@ -17,6 +17,7 @@
         "account",
         "sale",
         "sale_stock",
+        "enco_sale_order_ext",
         ],
     "data": [
         "report/report_layout.xml",
