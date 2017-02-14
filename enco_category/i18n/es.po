@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-16 12:07+0000\n"
-"PO-Revision-Date: 2017-01-16 13:09+0100\n"
+"POT-Creation-Date: 2017-02-14 11:03+0000\n"
+"PO-Revision-Date: 2017-02-14 12:06+0100\n"
 "Last-Translator: Esther Martín <esthermartin@avanzosc.es>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,6 +21,11 @@ msgstr ""
 #: view:purchase.order:enco_category.view_request_for_quotation_filter
 #: view:sale.order:enco_category.view_sales_order_enco_filter
 msgid "Category"
+msgstr "Categoría"
+
+#. module: enco_category
+#: field:sale.order,category_id:0 field:sale.report,category_id:0
+msgid "Category id"
 msgstr "Categoría"
 
 #. module: enco_category
@@ -45,9 +50,20 @@ msgid "Purchase Order"
 msgstr "Pedido de compra"
 
 #. module: enco_category
+#: field:purchase.order,purchase_categ_id:0
+#: field:purchase.report,purchase_categ_id:0
+msgid "Purchase categ id"
+msgstr "Categoría de pedido"
+
+#. module: enco_category
 #: field:account.invoice,purchase_ids:0
 msgid "Purchases"
 msgstr "Compras"
+
+#. module: enco_category
+#: model:ir.model,name:enco_category.model_purchase_report
+msgid "Purchases Orders"
+msgstr "Pedidos de compras"
 
 #. module: enco_category
 #: field:account.invoice,sale_ids:0
@@ -63,6 +79,11 @@ msgstr "Categoría de ventas"
 #: model:ir.model,name:enco_category.model_sale_order
 msgid "Sales Order"
 msgstr "Pedido de venta"
+
+#. module: enco_category
+#: model:ir.model,name:enco_category.model_sale_report
+msgid "Sales Orders Statistics"
+msgstr "Estadísticas pedidos de venta"
 
 #. module: enco_category
 #: field:account.invoice,categ_ids:0 field:purchase.order,categ_ids:0

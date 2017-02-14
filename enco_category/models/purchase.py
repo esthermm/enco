@@ -18,9 +18,9 @@ class PurchaseOrder(models.Model):
     @api.depends('categ_ids')
     def _compute_category_id(self):
         for record in self:
-            record.category_id = record.categ_ids[:1]
+            record.purchase_categ_id = record.categ_ids[:1]
 
-    category_id = fields.Many2one(
+    purchase_categ_id = fields.Many2one(
         comodel_name='crm.case.categ',
         compute='_compute_category_id', store=True)
 
