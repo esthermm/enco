@@ -11,7 +11,7 @@
         'purchase',
         'procurement',
         'enco_purcharce_order_ext',
-        'enco_sale_order_ext'
+        'enco_sale_order_ext',
     ],
     "author": "AvanzOSC",
     "category": "Custom Module",

@@ -21,7 +21,6 @@
     "data": [
         "report/report_layout.xml",
         "report/report_paperformat.xml",
-        "report/report_generalledger.xml",
         "views/sale_order_view.xml",
         ],
     "installable": True
