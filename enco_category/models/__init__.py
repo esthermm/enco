@@ -6,3 +6,5 @@ from . import purchase
 from . import procurement
 from . import invoice
 from . import sale
+from . import sale_report
+from . import purchase_report

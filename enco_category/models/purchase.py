@@ -15,6 +15,16 @@ class PurchaseOrder(models.Model):
         context="{'object_name': 'crm.lead'}")
 
     @api.multi
+    @api.depends('categ_ids')
+    def _compute_category_id(self):
+        for record in self:
+            record.category_id = record.categ_ids[:1]
+
+    category_id = fields.Many2one(
+        comodel_name='crm.case.categ',
+        compute='_compute_category_id', store=True)
+
+    @api.multi
     def action_invoice_create(self):
         res = super(PurchaseOrder, self).action_invoice_create()
         for order in self:

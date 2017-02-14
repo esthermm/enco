@@ -11,8 +11,9 @@ class PurchaseReport(models.Model):
     _inherit = 'purchase.report'
 
     period_ack = fields.Char('ACK period', readonly=True)
+    category_id = fields.Many2one(comodel_name='crm.case.categ', readonly=True)
 
-    def init(self, cr):
+def init(self, cr):
         tools.sql.drop_view_if_exists(cr, 'purchase_report')
         cr.execute("""
             create or replace view purchase_report as (
@@ -43,6 +44,7 @@ class PurchaseReport(models.Model):
                     t.uom_id as product_uom,
                     s.location_id as location_id,
                     s.period_ack as period_ack,
+                    s.category_id as category_id,
                     sum(l.product_qty/u.factor*u2.factor) as quantity,
                     extract(epoch from age(s.date_approve,s.date_order))/(24*60*60)::decimal(16,2) as delay,
                     extract(epoch from age(l.date_planned,s.date_order))/(24*60*60)::decimal(16,2) as delay_pass,
@@ -86,6 +88,9 @@ class PurchaseReport(models.Model):
                     t.uom_id,
                     u.id,
                     u2.factor,
-                    s.period_ack
+                    s.period_ack,
+                    s.category_id
             )
         """)
+
+
