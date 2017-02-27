@@ -16,11 +16,13 @@
     "depends": [
         "analytic",
         "sale",
+        "stock_valued_picking_report",
         ],
     "data": [
         "views/analytic_security.xml",
         "views/analytic_view.xml",
         "views/sale_view.xml",
+        "report/report_view.xml",
         "security/ir.model.access.csv",
         ],
     "installable": True

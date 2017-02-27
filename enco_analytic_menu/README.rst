@@ -6,7 +6,11 @@
 Enco Analytic Menu
 ==================
 
-New menu for analytic account
+* New menu for analytic account.
+
+* Custom report for pickings.
+
+* Add client_order_ref on tree view.
 
 
 
