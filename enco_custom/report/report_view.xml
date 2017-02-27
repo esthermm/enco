@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="enco_report_invoice_layouted" inherit_id="account_payment_partner.report_invoice_payment_mode">
+            <xpath expr="//p[@t-if='o.payment_mode_id.note']" position="replace">
+                <p t-if="o.payment_mode_id">
+                    <strong>Payment Mode:</strong>
+                    <span t-field="o.payment_mode_id" />
+                </p>
+                <p t-if="o.date_due">
+                    <strong>Due Date:</strong>
+                    <span t-field="o.date_due" />
+                </p>
+            </xpath>
+        </template>
+        <template id="report_expense_sequence" inherit_id="hr_expense.report_expense">
+            <xpath expr="//h2" position="replace">
+                 <h2>HR Expenses <span t-field="o.number" /></h2>
+            </xpath>
+        </template>
+    </data>
+</openerp>

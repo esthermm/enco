@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="sale_quotation_view_tree_inh" model="ir.ui.view">
+            <field name="name">sale.quotation.tree_inh</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree"/>
+            <field name="arch" type="xml">
+                <field name="amount_total" position="before">
+                    <field name="margin" sum="Total Margin"/>
+                    <field name="amount_untaxed" sum="Total Tax Excluded"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>
