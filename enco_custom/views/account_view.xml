@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="account_move_line_min_view_tree" model="ir.ui.view">
+            <field name="name">account.move.line.min.tree</field>
+            <field name="model">account.move.line</field>
+            <field name="inherit_id" ref="account_due_list.view_payments_tree" />
+            <field name="arch" type="xml">
+                <field name="invoice_date" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="invoice_origin" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="name" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="partner_ref" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="payment_term_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

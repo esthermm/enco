@@ -14,14 +14,19 @@
         "Esther Martín <esthermartin@avanzosc.es>",
     ],
     "depends": [
-        "account",
+        "account_due_list",
         "sale",
         "sale_stock",
+        "account_payment_partner",
+        "hr_expense_sequence",
         ],
     "data": [
         "report/report_layout.xml",
         "report/report_paperformat.xml",
+        "report/report_view.xml",
         "views/sale_order_view.xml",
+        "views/res_partner_view.xml",
+        "views/account_view.xml",
         ],
     "installable": True
 }

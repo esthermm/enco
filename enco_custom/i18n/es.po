@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 09:29+0000\n"
-"PO-Revision-Date: 2016-11-25 10:30+0100\n"
+"POT-Creation-Date: 2017-02-17 09:44+0000\n"
+"PO-Revision-Date: 2017-02-17 10:47+0100\n"
 "Last-Translator: Esther Martín <esthermartin@avanzosc.es>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -27,6 +27,11 @@ msgid "Done"
 msgstr "Realizado"
 
 #. module: enco_custom
+#: view:website:account.report_invoice_document
+msgid "Due Date:"
+msgstr "Fecha vencimiento:"
+
+#. module: enco_custom
 #: view:website:report.external_layout_footer
 msgid "Email:"
 msgstr "Correo electrónico:"
@@ -40,6 +45,11 @@ msgstr "No entregado"
 #: view:website:report.external_layout_footer
 msgid "Page:"
 msgstr "Página:"
+
+#. module: enco_custom
+#: view:website:account.report_invoice_document
+msgid "Payment Mode:"
+msgstr "Modo de pago:"
 
 #. module: enco_custom
 #: view:website:report.external_layout_footer
@@ -71,3 +81,4 @@ msgstr "CIF:"
 #: view:website:report.external_layout_footer
 msgid "Website:"
 msgstr "Sitio web:"
+
