@@ -11,6 +11,12 @@
                     <strong>Due Date:</strong>
                     <span t-field="o.date_due" />
                 </p>
+                <p>
+                    <tr t-foreach="o.company_id.bank_ids.filtered(lambda x: x.footer)" t-as="bank">
+                        CTA. CTE <span t-field="bank.acc_number"/>
+                        SWIFT <span t-field="bank.bank_bic"/>
+                    </tr>
+                </p>
             </xpath>
         </template>
         <template id="report_expense_sequence" inherit_id="hr_expense.report_expense">
