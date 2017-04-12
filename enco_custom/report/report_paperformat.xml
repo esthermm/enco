@@ -6,5 +6,23 @@
             <field name="header_spacing">40</field>
             <field name="margin_bottom">20</field>
         </record>
+        <!-- Generic report -->
+        <report id="report_account_balance_reporting_generic"
+            model="account.balance.reporting"
+            report_type="qweb-pdf"
+            string="Generic balance report (Custom)"
+            name="enco_custom.report_generic_enco"
+            file="enco_custom.report_generic_enco"
+    />
+        
+        <!-- Generic report without zero lines -->
+        <report id="report_account_balance_reporting_default_non_zero"
+            model="account.balance.reporting"
+            report_type="qweb-pdf"
+            string="Generic balance report (Custom non zero lines)"
+            menu="False"
+            name="enco_custom.report_generic_enco_non_zero"
+            file="enco_custom.report_generic_enco"
+    />
     </data>
 </openerp>
