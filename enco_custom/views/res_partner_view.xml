@@ -24,31 +24,40 @@
                 </filter>
             </field>
         </record>
-        <record id="view_partner_property_form" model="ir.ui.view">
-            <field name="name">res.partner.vat.inherit</field>
-            <field name="model">res.partner</field>
-            <field name="inherit_id" ref="account.view_partner_property_form"/>
-            <field name="arch" type="xml">
-                <field name="property_account_position" position="replace"/>
-                <field name="title" position="after">
-                    <field name="property_account_position" widget="selection" attrs="{'invisible': [('is_company', '=', False)]}"/>
-                </field>
-            </field>
-        </record>
         <record id="view_partner_form" model="ir.ui.view">
             <field name="name">res.partner.vat.inherit</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base_vat.view_partner_form"/>
             <field name="arch" type="xml">
+                <field name="property_account_position" position="replace"/>
                 <label for="vat" position="replace"/>
                 <div name="vat_info" position="replace"/>
-                <field name="property_account_position" position="after">
+            </field>
+        </record>
+        <record id="view_partner_property_form" model="ir.ui.view">
+            <field name="name">account_partner_payment.partner_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account_payment_partner.view_partner_property_form" />
+            <field name="arch" type="xml">
+                <field name="property_payment_term" position="replace"/>
+                <field name="property_supplier_payment_term" position="replace"/>
+            </field>
+        </record>
+        <record id="view_partner_base_vat_form" model="ir.ui.view">
+            <field name="name">res.partner.base.vat.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="title" position="after">
+                    <field name="property_account_position" widget="selection" attrs="{'invisible': [('is_company', '=', False)]}"/>
                     <label for="vat" attrs="{'invisible': [('is_company', '=', False)]}"/>
                     <div name="vat_info" attrs="{'invisible': [('is_company', '=', False)]}">
                         <field name="vat" on_change="vat_change(vat)" placeholder="e.g. BE0477472701" class="oe_inline"/>
                         <button colspan="2" name="button_check_vat" string="Check Validity" type="object" icon="gtk-execute" class="oe_inline"/>
                         <field name="vat_subjected" class="oe_inline"/>
                     </div>
+                    <field name="property_payment_term" widget="selection"/>
+                    <field name="property_supplier_payment_term" widget="selection"/>
                 </field>
             </field>
         </record>
