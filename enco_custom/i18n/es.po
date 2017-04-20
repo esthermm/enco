@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-17 09:44+0000\n"
-"PO-Revision-Date: 2017-02-17 10:47+0100\n"
+"POT-Creation-Date: 2017-03-03 08:45+0000\n"
+"PO-Revision-Date: 2017-03-03 09:45+0100\n"
 "Last-Translator: Esther Martín <esthermartin@avanzosc.es>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,9 +17,24 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 
 #. module: enco_custom
+#: view:res.partner:enco_custom.res_partner_type_view_search
+msgid "Address Type"
+msgstr "Tipo de dirección"
+
+#. module: enco_custom
+#: view:website:account.report_invoice_document
+msgid "CTA. CTE"
+msgstr "CTA. CTE"
+
+#. module: enco_custom
 #: model:ir.model,name:enco_custom.model_res_company
 msgid "Companies"
 msgstr "Compañías"
+
+#. module: enco_custom
+#: view:res.partner:enco_custom.res_partner_type_view_search
+msgid "Country"
+msgstr "País"
 
 #. module: enco_custom
 #: view:sale.order:enco_custom.sale_order_shipped_view_search
@@ -35,6 +50,11 @@ msgstr "Fecha vencimiento:"
 #: view:website:report.external_layout_footer
 msgid "Email:"
 msgstr "Correo electrónico:"
+
+#. module: enco_custom
+#: view:website:hr_expense.report_expense
+msgid "HR Expenses"
+msgstr "Gastos RRHH"
 
 #. module: enco_custom
 #: view:sale.order:enco_custom.sale_order_shipped_view_search
@@ -65,6 +85,11 @@ msgstr "Albarán transferido"
 #: view:sale.order:enco_custom.sale_order_shipped_view_search
 msgid "Picking is not transferred"
 msgstr "El albarán aún no se ha transferido"
+
+#. module: enco_custom
+#: view:website:account.report_invoice_document
+msgid "SWIFT"
+msgstr "SWIFT"
 
 #. module: enco_custom
 #: view:sale.order:enco_custom.sale_order_shipped_view_search

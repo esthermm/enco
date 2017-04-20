@@ -12,6 +12,8 @@ Enco - Custom
 
 * Increase company registry text size.
 
+* Show VAT, fiscal position and payment_term in partners for everyone.
+
 
 Credits
 =======
