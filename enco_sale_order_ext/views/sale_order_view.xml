@@ -8,7 +8,7 @@
             <field name="inherit_id" ref="sale.view_order_form" />
             <field name="arch" type="xml">
                 <field name="partner_id" position="after">
-                    <field name="period_ack"/>
+                    <field name="period_ack"  attrs="{'required': [('state','not in',('draft','sent'))]}"  />
                 </field>
             </field>
         </record>
