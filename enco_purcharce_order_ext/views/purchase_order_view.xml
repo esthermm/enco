@@ -9,7 +9,8 @@
             <field name="priority" eval="21"/>
             <field name="arch" type="xml">
                 <field name="date_order" position="after">
-                    <field name="period_ack" />
+                    <field name="period_ack" required="1"/>
+                    <field name="client_id" required="1"/>
                 </field>
             </field>
         </record>
@@ -22,6 +23,7 @@
             <field name="arch" type="xml">
                 <field name="date_order" position="after">
                     <field name="period_ack"/>
+                    <field name="client_id" />
                 </field>
             </field>
         </record>

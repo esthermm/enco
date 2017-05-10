@@ -11,8 +11,7 @@ class AccountInvoice(models.Model):
     categ_ids = fields.Many2many(
         comodel_name='crm.case.categ', relation='invoice_category_rel',
         column1='order_id', column2='category_id', string='Tags',
-        domain="[('object_id.model', '=', 'crm.lead')]",
-        context="{'object_name': 'crm.lead'}")
+        domain="[('object_id.model', '=', 'crm.lead')]")
     sale_ids = fields.Many2many(
         comodel_name='sale.order', relation='sale_order_invoice_rel',
         column1='invoice_id', column2='order_id', string='Sales')

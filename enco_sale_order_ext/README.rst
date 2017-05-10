@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-================
-Opertek - Custom
-================
+====================
+Sale order extension
+====================
 
-* Show reference of supplier invoices on tree view.
+Add Period ACK Field. Ex: 13Q1, 13Q2 to purchase order.
 
 
 Credits
@@ -15,4 +15,5 @@ Credits
 
 Contributors
 ------------
+* Manuel Guil
 * Esther Martín <esthermartin@avanzosc.es>

@@ -19,7 +19,9 @@ class SaleOrder(models.Model):
         compute='_compute_category_id', store=True)
 
     @api.model
-    def _prepare_invoice(self, order, lines):
-        vals = super(SaleOrder, self)._prepare_invoice(order, lines)
-        vals['categ_ids'] = [(6, 0, order.categ_ids.ids)]
-        return vals
+    def _make_invoice(self, order, lines):
+        inv_id = super(SaleOrder, self)._make_invoice(order, lines)
+        invoice = self.env['account.invoice'].browse(inv_id)
+        invoice.categ_ids = [
+            (6, 0, [categ_id.id for categ_id in order.categ_ids])]
+        return inv_id
