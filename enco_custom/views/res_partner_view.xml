@@ -29,7 +29,6 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base_vat.view_partner_form"/>
             <field name="arch" type="xml">
-                <field name="property_account_position" position="replace"/>
                 <label for="vat" position="replace"/>
                 <div name="vat_info" position="replace"/>
             </field>
@@ -43,13 +42,21 @@
                 <field name="property_supplier_payment_term" position="replace"/>
             </field>
         </record>
+        <record id="account_payment_partner_view_form" model="ir.ui.view">
+            <field name="name">account.payment.partner.replace.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account_payment_partner.view_partner_property_form" />
+            <field name="arch" type="xml">
+                <field name="customer_payment_mode" position="replace" />
+                <field name="supplier_payment_mode" position="replace"/>
+            </field>
+        </record>
         <record id="view_partner_base_vat_form" model="ir.ui.view">
             <field name="name">res.partner.base.vat.form</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
                 <field name="title" position="after">
-                    <field name="property_account_position" widget="selection" attrs="{'invisible': [('is_company', '=', False)]}"/>
                     <label for="vat" attrs="{'invisible': [('is_company', '=', False)]}"/>
                     <div name="vat_info" attrs="{'invisible': [('is_company', '=', False)]}">
                         <field name="vat" on_change="vat_change(vat)" placeholder="e.g. BE0477472701" class="oe_inline"/>
@@ -57,7 +64,7 @@
                         <field name="vat_subjected" class="oe_inline"/>
                     </div>
                     <field name="property_payment_term" widget="selection"/>
-                    <field name="property_supplier_payment_term" widget="selection"/>
+                    <field name="customer_payment_mode" domain="[('sale_ok', '=', True)]" widget="selection"/>
                 </field>
             </field>
         </record>

@@ -14,6 +14,9 @@ Enco - Custom
 
 * Show VAT, fiscal position and payment_term in partners for everyone.
 
+* New field in account_move_line. This field allow to change notes when the period is closed.
+
+* Two new type of address for customers.
 
 Credits
 =======

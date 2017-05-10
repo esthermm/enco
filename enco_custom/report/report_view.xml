@@ -13,7 +13,7 @@
                 </p>
                 <p>
                     <tr t-foreach="o.company_id.bank_ids.filtered(lambda x: x.footer)" t-as="bank">
-                        CTA. CTE <span t-field="bank.acc_number"/>
+                        IBAN <span t-field="bank.acc_number"/>
                         SWIFT <span t-field="bank.bank_bic"/>
                     </tr>
                 </p>

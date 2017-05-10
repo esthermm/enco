@@ -4,7 +4,7 @@
 
 {
     "name": "Enco - Custom",
-    "version": "8.0.1.0.0",
+    "version": "8.0.1.0.1",
     "author": "AvanzOSC",
     "license": "AGPL-3",
     "category": "Custom module",
@@ -15,7 +15,6 @@
     ],
     "depends": [
         "account_due_list",
-        "sale",
         "sale_stock",
         "account_payment_partner",
         "hr_expense_sequence",

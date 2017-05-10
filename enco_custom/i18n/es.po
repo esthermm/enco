@@ -6,15 +6,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-03 08:45+0000\n"
-"PO-Revision-Date: 2017-03-03 09:45+0100\n"
-"Last-Translator: Esther Martín <esthermartin@avanzosc.es>\n"
+"POT-Creation-Date: 2017-05-10 10:33+0000\n"
+"PO-Revision-Date: 2017-05-10 10:33+0000\n"
+"Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"X-Generator: Poedit 1.5.4\n"
+
+#. module: enco_custom
+#: view:account.move.line:enco_custom.account_move_line_min_view_form
+msgid "Add an internal note..."
+msgstr "Añadir una nota interna..."
 
 #. module: enco_custom
 #: view:res.partner:enco_custom.res_partner_type_view_search
@@ -22,9 +26,24 @@ msgid "Address Type"
 msgstr "Tipo de dirección"
 
 #. module: enco_custom
-#: view:website:account.report_invoice_document
-msgid "CTA. CTE"
-msgstr "CTA. CTE"
+#: view:website:enco_custom.report_generic_enco
+msgid "CODE"
+msgstr "CÓDIGO"
+
+#. module: enco_custom
+#: view:website:enco_custom.report_generic_enco
+msgid "CONCEPT"
+msgstr "CONCEPTO"
+
+#. module: enco_custom
+#: view:website:enco_custom.report_generic_enco
+msgid "CURRENT"
+msgstr "ACTUAL"
+
+#. module: enco_custom
+#: view:res.partner:enco_custom.view_partner_base_vat_form
+msgid "Check Validity"
+msgstr "Verificar validez"
 
 #. module: enco_custom
 #: model:ir.model,name:enco_custom.model_res_company
@@ -52,9 +71,29 @@ msgid "Email:"
 msgstr "Correo electrónico:"
 
 #. module: enco_custom
+#: model:ir.actions.report.xml,name:enco_custom.report_account_balance_reporting_default_non_zero
+msgid "Generic balance report (Custom non zero lines)"
+msgstr "Generic balance report (Custom non zero lines)"
+
+#. module: enco_custom
+#: model:ir.actions.report.xml,name:enco_custom.report_account_balance_reporting_generic
+msgid "Generic balance report (Custom)"
+msgstr "Generic balance report (Custom)"
+
+#. module: enco_custom
 #: view:website:hr_expense.report_expense
 msgid "HR Expenses"
 msgstr "Gastos RRHH"
+
+#. module: enco_custom
+#: view:website:account.report_invoice_document
+msgid "IBAN"
+msgstr "IBAN"
+
+#. module: enco_custom
+#: model:ir.model,name:enco_custom.model_account_move_line
+msgid "Journal Items"
+msgstr "Apuntes contables"
 
 #. module: enco_custom
 #: view:sale.order:enco_custom.sale_order_shipped_view_search
@@ -62,9 +101,25 @@ msgid "Not shipped"
 msgstr "No entregado"
 
 #. module: enco_custom
+#: field:account.move.line,note:0
+msgid "Note"
+msgstr "Nota"
+
+#. module: enco_custom
+#: code:addons/enco_custom/models/res_partner.py:13
+#, python-format
+msgid "Online invoice"
+msgstr "Factura online"
+
+#. module: enco_custom
 #: view:website:report.external_layout_footer
 msgid "Page:"
 msgstr "Página:"
+
+#. module: enco_custom
+#: model:ir.model,name:enco_custom.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
 
 #. module: enco_custom
 #: view:website:account.report_invoice_document
@@ -95,6 +150,12 @@ msgstr "SWIFT"
 #: view:sale.order:enco_custom.sale_order_shipped_view_search
 msgid "Shipped"
 msgstr "Entregado"
+
+#. module: enco_custom
+#: code:addons/enco_custom/models/res_partner.py:12
+#, python-format
+msgid "Shipping material"
+msgstr "Envío material"
 
 #. module: enco_custom
 #: view:website:report.external_layout_footer
