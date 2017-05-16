@@ -21,6 +21,9 @@
                 <field name="payment_term_id" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </field>
+                <field name="account_id" position="after">
+                    <field name="received_check" />
+                </field>
             </field>
         </record>
         <record id="account_move_line_min_view_form" model="ir.ui.view">
@@ -34,6 +37,19 @@
                 <field name="narration" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </field>
+                <field name="statement_id" position="after">
+                    <field name="received_check" />
+                </field>
+            </field>
+        </record>
+        <record id="account_move_line_min_view_search" model="ir.ui.view">
+            <field name="name">account.move.line.min.search</field>
+            <field name="model">account.move.line</field>
+            <field name="inherit_id" ref="account_due_list.view_payments_filter" />
+            <field name="arch" type="xml">
+                <filter string="Salesperson" position="after">
+                    <filter string="Received check" domain="[]" context="{'group_by':'received_check'}"/>
+                </filter>
             </field>
         </record>
     </data>

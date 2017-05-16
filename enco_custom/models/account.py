@@ -9,3 +9,6 @@ class AccountMoveLine(models.Model):
     _inherit = 'account.move.line'
 
     note = fields.Text()
+    received_check = fields.Boolean(string='Received check',
+        help="To write down that a check in paper support has been received, "
+        "for example.")
