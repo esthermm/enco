@@ -47,8 +47,9 @@
             <field name="model">account.move.line</field>
             <field name="inherit_id" ref="account_due_list.view_payments_filter" />
             <field name="arch" type="xml">
-                <filter string="Salesperson" position="after">
-                    <filter string="Received check" domain="[]" context="{'group_by':'received_check'}"/>
+                <filter name="overdue" position="after">
+                    <filter string="Received check" domain="[('received_check','=',True)]" />
+                    <filter string="Unreceived check" domain="[('received_check','=',False)]" />
                 </filter>
             </field>
         </record>
