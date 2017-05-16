@@ -107,8 +107,7 @@ msgid "Note"
 msgstr "Nota"
 
 #. module: enco_custom
-#: code:addons/enco_custom/models/res_partner.py:13
-#, python-format
+#: selection:res.partner,type:0
 msgid "Online invoice"
 msgstr "Factura online"
 
@@ -163,8 +162,7 @@ msgid "Shipped"
 msgstr "Entregado"
 
 #. module: enco_custom
-#: code:addons/enco_custom/models/res_partner.py:12
-#, python-format
+#: selection:res.partner,type:0
 msgid "Shipping material"
 msgstr "Envío material"
 
